@@ -1,5 +1,5 @@
 from django.db import models
-from dhango.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
+from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
 from django.contrib.auth.hashers import make_password
 
 class UserManager(BaseUserManager):
@@ -23,14 +23,14 @@ class UserManager(BaseUserManager):
             return user
 
 class User(AbstractBaseUser, PermissionsMixin):
-    documentId = models.Charfield('DocumentId', primary_key = True)
-    name = models.Charfield(45)
-    lastName = models.Charfield(45)
-    cellularPhone = models.Charfield(10)
-    address = models.Charfield(45)
-    email = models.Charfield(45)
-    role = models.Charfield(20)
-    password = models.CharField('Password' , max_length = 8)
+    documentId = models.IntegerField('DocumentId', primary_key = True, max_length = 10, null = False)
+    name = models.Charfield(max_length = 45, null = False)
+    lastName = models.Charfield(max_length = 45, null = False)
+    cellularPhone = models.Charfield(max_length = 10, null = False)
+    address = models.Charfield(max_length = 45, null = False)
+    email = models.Charfield(max_length = 45, null = False)
+    role = models.Charfield(max_length = 20, null = False)
+    password = models.CharField('Password' , max_length = 8, null = False)
     assignDoctor = models.ForeignKey('self', on_delete = models.SET_NULL)
     assignNurse = models.ForeignKey('self', on_delete = models.SET_NULL)
     assignRelative = models.ForeignKey('self', on_delete = models.SET_NULL)
