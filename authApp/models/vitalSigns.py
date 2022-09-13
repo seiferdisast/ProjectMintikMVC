@@ -1,7 +1,7 @@
-from .user import User
 from django.db import models
+from .user import User
 
-class MedicalHistory(models.Model):
+class vitalSigns(models.Model):
     vitalSignsID = models.IntegerField(default = 10)
     oximetry = models.FloatField(default = 99)
     respiratoryRate = models.FloatField(default = 99)
@@ -11,4 +11,4 @@ class MedicalHistory(models.Model):
     systolicBloodPressure = models.FloatField(default = 199)
     bloodGlucose = models.FloatField(default = 299)
     date = models.DateField()
-    users_documentID = models.CharField(10)
+    userDocumentID = models.IntegerField(max_length = 10)
