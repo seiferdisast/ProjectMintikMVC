@@ -2,6 +2,7 @@ from .user import User
 from django.db import models
 
 class medicalHistory(models.Model):
+    vitalSignsID = models.IntegerField(default = 10)
     oximetry = models.FloatField(default = 99)
     respiratoryRate = models.FloatField(default = 99)
     heartRate = models.FloatField(default = 99)
@@ -10,3 +11,4 @@ class medicalHistory(models.Model):
     systolicBloodPressure = models.FloatField(default = 199)
     bloodGlucose = models.FloatField(default = 299)
     date = models.DateField
+    users_documentID = models.CharField(10)
