@@ -31,9 +31,9 @@ class User(AbstractBaseUser, PermissionsMixin):
     email = models.Charfield(max_length = 45, null = False)
     role = models.Charfield('Role', max_length = 20, null = False)
     password = models.CharField('Password' , max_length = 8, null = False)
-    assignDoctor = models.ForeignKey(self, on_delete = models.SET_NULL)
-    assignNurse = models.ForeignKey(self, on_delete = models.SET_NULL)
-    assignRelative = models.ForeignKey(self, on_delete = models.SET_NULL)
+    assignDoctor = models.ForeignKey('self', on_delete = models.SET_NULL)
+    assignNurse = models.ForeignKey('self', on_delete = models.SET_NULL)
+    assignRelative = models.ForeignKey('self', on_delete = models.SET_NULL)
 
     def save(self,  **kwargs):
         some_salt = 'mMUj0DrIK6vgtdIYepkIxN'
