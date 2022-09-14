@@ -2,7 +2,7 @@ from django.db import models
 from .user import User
 
 class VitalSigns(models.Model):
-    vitalSignsID = models.IntegerField(default = 10)
+    vitalSignsID = models.AutoField(primary_key=True, default = 10, null = False)
     oximetry = models.FloatField(default = 99)
     respiratoryRate = models.FloatField(default = 99)
     heartRate = models.FloatField(default = 99)
