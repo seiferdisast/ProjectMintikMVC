@@ -1,7 +1,7 @@
 from django.db import models
 from .user import User
 
-class vitalSigns(models.Model):
+class VitalSigns(models.Model):
     vitalSignsID = models.IntegerField(default = 10)
     oximetry = models.FloatField(default = 99)
     respiratoryRate = models.FloatField(default = 99)
@@ -10,5 +10,5 @@ class vitalSigns(models.Model):
     diastolicBloodPressure = models.FloatField(default = 199)
     systolicBloodPressure = models.FloatField(default = 199)
     bloodGlucose = models.FloatField(default = 299)
-    date = models.DateField()
-    userDocumentID = models.IntegerField(max_length = 10)
+    vitalSignsDate = models.DateTimeField()
+    patientDocumentId = models.ForeignKey(User, related_name='patient_document', on_delete=models.CASCADE)
