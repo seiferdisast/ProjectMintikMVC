@@ -67,6 +67,8 @@ REST_FRAMEWORK = {
     ('rest_framework_simplejwt.authentication.JWTAuthentication', )
 }
 
+AUTH_USER_MODEL = 'authApp.User'
+
 ROOT_URLCONF = 'authProject.urls'
 
 TEMPLATES = [
