@@ -11,4 +11,4 @@ class VitalSigns(models.Model):
     systolicBloodPressure = models.FloatField(default = 199)
     bloodGlucose = models.FloatField(default = 299)
     vitalSignsDate = models.DateTimeField()
-    patientDocumentId = models.ForeignKey(User, related_name='patient_document', on_delete=models.CASCADE)
+    patient_documentId = models.ForeignKey(User, related_name='patient_document2', on_delete=models.CASCADE)

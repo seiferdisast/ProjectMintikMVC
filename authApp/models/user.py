@@ -1,3 +1,4 @@
+from pickle import TRUE
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
 from django.contrib.auth.hashers import make_password
@@ -24,16 +25,16 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     documentId = models.IntegerField('DocumentId', primary_key = True, max_length = 10, null = False)
-    name = models.Charfield(max_length = 45, null = False)
-    lastName = models.Charfield(max_length = 45, null = False)
-    cellularPhone = models.Charfield(max_length = 10, null = False)
-    address = models.Charfield(max_length = 45, null = False)
-    email = models.Charfield(max_length = 45, null = False)
-    role = models.Charfield('Role', max_length = 20, null = False)
+    name = models.CharField(max_length = 45, null = False)
+    lastName = models.CharField(max_length = 45, null = False)
+    cellularPhone = models.CharField(max_length = 10, null = False)
+    address = models.CharField(max_length = 45, null = False)
+    email = models.CharField(max_length = 45, null = False)
+    role = models.CharField('Role', max_length = 20, null = False)
     password = models.CharField('Password' , max_length = 8, null = False)
-    assignDoctor = models.ForeignKey('self', on_delete = models.SET_NULL)
-    assignNurse = models.ForeignKey('self', on_delete = models.SET_NULL)
-    assignRelative = models.ForeignKey('self', on_delete = models.SET_NULL)
+    assignDoctor = models.ForeignKey('self', related_name='patient_document4', on_delete= models.SET_NULL ,null = True)
+    assignNurse = models.ForeignKey('self', related_name='patient_document5', on_delete= models.SET_NULL, null = True)
+    assignRelative = models.ForeignKey('self',related_name='patient_document6', on_delete= models.SET_NULL, null = True)
 
     def save(self,  **kwargs):
         some_salt = 'mMUj0DrIK6vgtdIYepkIxN'

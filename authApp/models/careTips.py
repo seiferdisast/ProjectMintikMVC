@@ -5,6 +5,6 @@ class CareTips(models.Model):
     careTipsId: models.AutoField(primary_key=True)
     careTip: models.CharField(max_length= 255)
     CareTipdate: models.DateTimeField()
-    patientDocumentID: models.ForeignKey(User, related_name='patientDocumentID', on_delete=models.CASCADE)
+    patient_documentID: models.ForeignKey(User, related_name='patientDocument3', on_delete=models.CASCADE)
  
  
