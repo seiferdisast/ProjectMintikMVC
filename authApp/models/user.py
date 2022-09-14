@@ -24,7 +24,7 @@ class UserManager(BaseUserManager):
             return user
 
 class User(AbstractBaseUser, PermissionsMixin):
-    documentId = models.IntegerField('DocumentId', primary_key = True, max_length = 10, null = False)
+    documentId = models.IntegerField('DocumentId', primary_key = True, null = False)
     name = models.CharField(max_length = 45, null = False)
     lastName = models.CharField(max_length = 45, null = False)
     cellularPhone = models.CharField(max_length = 10, null = False)
