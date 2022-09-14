@@ -7,3 +7,4 @@ class CareTips(models.Model):
     CareTipdate: models.DateTimeField()
     patientDocumentID: models.ForeignKey(User, related_name='patientDocumentID', on_delete=models.CASCADE)
  
+ 
