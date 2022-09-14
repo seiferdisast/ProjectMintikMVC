@@ -1,8 +1,8 @@
 from django.db import models 
-from .user import user
+from .user import User
 
 class Diagnostic(models.Model):
- diagnosticID = models.IntegerField(default = 10)
- patient_diagnostic = models.CharField(default = 255)
- date = models.DateTimeField()
- users_documentID = models.CharField(default = 10)
+    diagnosticId = models.IntegerField(primary_key = True)
+    patientDiagnostic = models.CharField(max_length = 255)
+    date = models.DateTimeField()
+    patientDocumentId = models.ForeignKey(User, related_name='patient_document', on_delete=models.CASCADE)
