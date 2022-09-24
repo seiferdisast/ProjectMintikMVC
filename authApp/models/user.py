@@ -38,15 +38,15 @@ class User(AbstractBaseUser, PermissionsMixin):
     assignDoctor = models.ForeignKey('self',
                                      related_name='patient_document4',
                                      on_delete=models.SET_NULL,
-                                     null=True)
+                                     null=True, blank=True)
     assignNurse = models.ForeignKey('self',
                                     related_name='patient_document5',
                                     on_delete=models.SET_NULL,
-                                    null=True)
+                                    null=True, blank=True)
     assignRelative = models.ForeignKey('self',
                                        related_name='patient_document6',
                                        on_delete=models.SET_NULL,
-                                       null=True)
+                                       null=True, blank=True)
 
     objects = UserManager()
     USERNAME_FIELD = 'documentId'

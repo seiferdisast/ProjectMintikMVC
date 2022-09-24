@@ -10,27 +10,16 @@ from authApp.serializers.vitalSignsSerializer import VitalSignsSerializer
 
 
 class UserSerializer(serializers.ModelSerializer):
-    careTip = CareTipsSerializer()
-    diagnostic = DiagnosticSerializer()
-    vitalSign = VitalSignsSerializer()
-
     class Meta:
         model = User
         fields = ['documentId', 'name', 'lastName', 'cellularPhone', 'address', 'email', 'role', 'assignDoctor', 'assignNurse', 'assignRelative']
 
     def create(self, validated_data):
-        careTipData = validated_data.pop('careTip')
-        diagnosticData = validated_data.pop('diagnostic')
-        vitalSignData = validated_data.pop('vitalSign')
         userInstance = User.objects.create(**validated_data)
-        CareTips.objects.create(user=userInstance, **careTipDataData)
-        Diagnostic.objects.create(user=userInstance, **diagnosticData)
-        VitalSigns.objects.create(user=userInstance, **vitalSingnData)
         return userInstance
 
     def to_representation(self, obj):
         user = User.objects.get(id=obj.documentId)
-        account = Account.objects.get(user=obj.documentId)
         return {
             'id': user.documentId,
             'username': user.name,
@@ -40,7 +29,7 @@ class UserSerializer(serializers.ModelSerializer):
             'name': user.name,
             'email': user.email,
             'role': user.role,
-            'assignDoctor' : {},
-            'assignNurse' : null,
-            'assignRelative' : null
+            'assignDoctor' : UserSerializer(read_only=True),
+            'assignNurse' : UserSerializer(read_only=True),
+            'assignRelative' : UserSerializer(read_only=True)
     }
