@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .type__icon {
-
+    height: 1.5rem;
 }
 
 .type__content {
@@ -56,4 +56,31 @@ h1, h2, h3, h4, h5 {
     font-size: 0.8rem;
     line-height: 2;
     text-align: center;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.developers {
+    font-family: var(--fuenteParrafos);
+    font-size: 0.8rem;
+    line-height: 2;
+    text-align: center;
+}
+
+.developers__icon {
+    height: 1.5rem;
+}
+
+.socialnetworks {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+
+}
+
+.socialnetworks__icon {
+    height: 1.5rem;
+}
+
+.icon {
+    width: auto; 
+    max-height: 100%; 
+}
