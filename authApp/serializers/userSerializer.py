@@ -19,17 +19,24 @@ class UserSerializer(serializers.ModelSerializer):
         return userInstance
 
     def to_representation(self, obj):
-        user = User.objects.get(id=obj.documentId)
+        if(obj is None):
+            return None
+
+        user = User.objects.get(pk=obj.documentId)
         return {
-            'id': user.documentId,
-            'username': user.name,
+            'documentId': user.documentId,
+            'name': user.name,
             'lastname': user.lastName,
             'cellullarPhone': user.cellularPhone,
             'address': user.address,
-            'name': user.name,
             'email': user.email,
             'role': user.role,
-            'assignDoctor' : UserSerializer(read_only=True),
-            'assignNurse' : UserSerializer(read_only=True),
-            'assignRelative' : UserSerializer(read_only=True)
+            'assignDoctor' : UserSerializer().to_representation(user.assignDoctor), #if(user.assignDoctor is not None) else None,
+            'assignNurse' : UserSerializer().to_representation(user.assignNurse),#if(user.assignNurse is not None) else None,
+            'assignRelative' : UserSerializer().to_representation(user.assignRelative)#if(user.assignRelative is not None) else None
     }
+
+class UserLiteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['documentId']
