@@ -7,19 +7,125 @@
     --blanco: #ffffff;
     --negro: #000000;
 } 
+/*________________________________________________________________*/
+/*--------------------------I N D E X-----------------------------*/
+/*´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´'*/
 
+/***BODY***/
+*{
+    padding: 0;
+    margin: 3;
+    box-sizing: border-box;
+}
+.header{
+    width: 150px;
+    height: 150px;
+    background-color: #ffffff;
+}
 
+/*Body sección 1*/
+
+#contenidoCarrusel{
+    height: 400px;
+    overflow: hidden;
+}
+.carrusel{
+    height: 400px;
+    position: relative;
+}
+.tarjetaCarrusel{
+    background-color: aqua;
+    height: 200%;
+}
+.flechasCarrusel{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.imgFlechas{
+    width: 50px;
+    height: 50px;
+}
+#imagenCarrusel1{
+    background-color: black;
+}
+#imagenCarrusel2{
+    background-color: mediumseagreen;
+}
+#imagenCarrusel3{
+    background-color: aqua;
+}
+a{
+    text-decoration: none;
+}
+.imgIndex{
+    width: 100%;
+    height: 50%;
+}
 h1, h2, h3, h4, h5 {
     font-family: var(--fuenteHeading);
     line-height: 1.2;
 }
 
+/*Body sección 2*/
+
+.seccion2{
+    display: flex;
+    padding: 20px 90px 60px 90px;
+}
+section article{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1220px;
+}
+.imgSec2{
+    width: 1400px;
+    height: 500px;
+}
+.IndexBody1{
+    position: absolute;
+    right: 38%;
+    width: 400px;
+    height: 450px;
+    padding: 50px 0px 0px 0px;
+}
+.IndexBody2{
+    position: absolute;
+    right: 15%;
+    width: 400px;
+    height: 450px;
+    padding: 50px 0px 0px 0px;
+}
+
+
+/*Body sección 3*/
+
+.seccion3{
+    width: 100%;
+    height: 850px;
+    display: flex;
+    justify-content: space-around;
+}
+.IndexFooter{
+    width: 600px;
+    height: 600px;
+    padding: 70px 50px 50px 70px;
+}
+
+
 /** footer **/
+
 .footer {
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
     margin-top: 4rem;
-    width: min(90%, 120rem);
-    margin: 0 auto;
+    width: min(100%, 120rem);
+    margin: auto;
     background-color: gray
 }
 
@@ -72,15 +178,70 @@ h1, h2, h3, h4, h5 {
 .socialnetworks {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    align-items: center;
-
 }
 
-.socialnetworks__icon {
-    height: 1.5rem;
+#socialnetworks__icon {
+    position: absolute;
+    padding-left: 810px;
 }
-
 .icon {
     width: auto; 
     max-height: 100%; 
 }
+/*________________________________________________________________*/
+/*--------------------------L O G I N-----------------------------*/
+/*´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´'*/
+
+/*Loginheader*/
+
+/*LoginBody*/
+.container_logIn_User{
+    display: flex;
+    padding: 50px 60px 30px 20px;
+}
+.processLogInUser{
+    flex-direction: row-reverse;
+}
+.LoginIm{
+    width: 980px;
+    height: 600px;
+}
+/*________________________________________________________________*/
+/*------------------------A U X I L I A R-------------------------*/
+/*´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´'*/
+.AuxiliarIcon{
+    width: 100px;
+    height: 100px;
+}
+#CarruselAux{
+    height: 400px;
+    overflow: hidden;
+}
+.carruselAuxiliar{
+    height: 400px;
+    position: relative;
+}
+.tarjetaCarruselAux{
+    float: left;
+    width: 50%;
+    height: 200%;
+}
+.flechasCarruselAux{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+a{
+    text-decoration: none;
+}
+.imgIndexAux{
+    width: 80%;
+    height: 50%;
+}
+
+/*Body sección 2*/

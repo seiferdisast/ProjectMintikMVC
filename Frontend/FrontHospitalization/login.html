@@ -19,8 +19,9 @@
 </header>
 <!----------------CUADRO DE INGRESO------------------->
 <body>
-    <div class="logIn_user">
-    <div class="container_logIn_User">
+    <div><img class="LoginIm" src="./img/LogInIm.png"></div>
+    <section class="logIn_user">
+    <article class="container_logIn_User">
         <h2>Login</h2>
         <form v-on:submit.prevent="processLogInUser">
             <input type="text" v-model="user.username" placeholder="Username">
@@ -29,8 +30,8 @@
             <br>
             <button type="submit">Login</button>
         </form>
-    </div>
-    </div>
+    </article>
+</section>
 </body>
 <!---------------FOOTER------------------------>
 <footer class="footer">
@@ -78,7 +79,7 @@
         </div>
     </div>
     <div class="socialnetworks">
-        <div class="socialnetworks__icon">
+        <div id="socialnetworks__icon">
             <img class="icon" src="img/whatsapp.png">
             <img class="icon" src="img/facebook.png">
             <img class="icon" src="img/instagram.png">
