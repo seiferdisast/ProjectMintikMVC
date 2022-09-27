@@ -7,7 +7,6 @@ from rest_framework.permissions import IsAuthenticated
 from authApp.models.user import User
 from authApp.serializers.userSerializer import UserSerializer
 
-
 class UserDetailView(generics.RetrieveAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer

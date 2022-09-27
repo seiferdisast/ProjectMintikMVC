@@ -16,11 +16,15 @@ Including another URLconf
 from django.urls import path
 from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshView)
 from authApp import views
+from authApp.views.patientsView import PatientsView
+from authApp.views.usersList import UsersList
+
 
 urlpatterns = [
     path('login/', TokenObtainPairView.as_view()),
     path('refresh/', TokenRefreshView.as_view()),
     path('user/create/', views.UserCreateView.as_view()),
     path('user/<int:pk>/', views.UserDetailView.as_view()),
-    path('users/', views.UserDetailView.as_view()),
+    path('patients/', PatientsView.as_view()),
+    path('users/', UsersList.as_view()),
 ]
