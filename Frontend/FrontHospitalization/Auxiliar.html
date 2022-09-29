@@ -14,104 +14,130 @@
 <!--BODY-->
 
 <body>
+    <!--Encabezado: login y home-->
+    <header class="iconosEncabezado">
+        <button class="buttonHome">
+            <a><img class="userIcon" src="./img/UserIcon.png"></a>
+        </button>
+        <button class="buttonHome">
+            <a><img class="homeIcon" src="./img/homeIcon.png"></a>
+        </button>
+    </header>
+    <!--Encabezado: barra de inicio-->
+    <section class="BarraInicio">
+        <h2 class="texto1">Hospitalización en casa</h2>
+        <img class="flechaBarraInicio" src="./img/flechaDerAux.png">
+        <h2 class="texto2">Inicio</h2>
+        <img class="flechaBarraInicio" src="./img/flechaDerAux.png">
+        <h2 class="texto2">Auxiliar</h2>
+    </section>
+    <!------BODY: SECCIÓN 1-------->
     <section class="Auxseccion1">
-        <div>
-            <img class="AuxiliarIcon" src="./img/AuxiliarIcon.png">
-            <button>Registrar paciente</button>
-            <button>Registrar médico</button>
-            <button>Registrar familiar</button>
+        <div class="AuxiliarIcon">
+            <img class="AuxiliarIconImg" src="./img/AuxiliarIcon.png">
+                <li class="botonesRegistrosAux">
+                    <ul><button onclick="" class="botonRegAux">Registrar paciente</button></ul>
+                    <ul><button onclick="" class="botonRegAux">Registrar médico</button></ul>
+                    <ul><button onclick="" class="botonRegAux">Registrar familiar</button></ul>
+                </li>
         </div>
-        <div id="CarruselAux">
-            <div class="carruselAuxiliar" id="carruselAux1">
-                <div class="tarjetaCarruselAux" id="imagenCarruselAux1"><img class="imgIndexAux"
-                        src="./img/AuxiliarCarousel1.png">
+        <div class="carouselAux">
+            <div class="slide-inner">
+                <input class="slide-open" type="radio" id="slide-1" name="slide" aria-hidden="true" hidden=""
+                    checked="checked">
+                <div class="slide-item">
+                    <img src="./img/AuxiliarCarousel1.png">
                 </div>
-                <div class="flechasCarruselAux">
-                    <a href="#imagenCarruselAux3"><i><img class="imgFlechasAux" src="./img/flechaIzqAux.png"></i></a>
-                    <a href="#imagenCarruselAux2"><i><img class="imgFlechasAux" src="./img/flechaDerAux.png"></i></a>
+                <input class="slide-open" type="radio" id="slide-2" name="slide" aria-hidden="true" hidden="">
+                <div class="slide-item">
+                    <img src="./img/AuxiliarCarousel2.png">
                 </div>
-            </div>
-            <div class="carruselAux" id="carruselAux2">
-                <div class="tarjetaCarruselAux" id="imagenCarruselAux2"><img class="imgIndexAux"
-                        src="./img/AuxiliarCarousel2.png">
+                <input class="slide-open" type="radio" id="slide-3" name="slide" aria-hidden="true" hidden="">
+                <div class="slide-item">
+                    <img src="./img/AuxiliarCarousel3.png">
                 </div>
-                <div class="flechasCarruselAux">
-                    <a href="#imagenCarruselAux1"><i><img class="imgFlechasAux" src="./img/flechaIzqAux.png"></i></a>
-                    <a href="#imagenCarruselAux3"><i><img class="imgFlechasAux" src="./img/flechaDerAux.png"></i></a>
-                </div>
-            </div>
-            <div class="carruselAux" id="carruselAux3">
-                <div class="tarjetaCarruselAux" id="imagenCarruselAux3"><img class="imgIndexAux"
-                        src="./img/AuxiliarCarousel3.png">
-                </div>
-                <div class="flechasCarruselAux">
-                    <a href="#imagenCarruselAux2"><i><img class="imgFlechasAux" src="./img/flechaIzqAux.png"></i></a>
-                    <a href="#imagenCarruselAux1"><i><img class="imgFlechasAux" src="./img/flechaDerAux.png"></i></a>
-                </div>
+                <label for="slide-3" class="slide-control prev control-1">‹</label>
+                <label for="slide-2" class="slide-control next control-1">›</label>
+                <label for="slide-1" class="slide-control prev control-2">‹</label>
+                <label for="slide-3" class="slide-control next control-2">›</label>
+                <label for="slide-2" class="slide-control prev control-3">‹</label>
+                <label for="slide-1" class="slide-control next control-3">›</label>
+                <ol class="slide-indicador">
+                    <li>
+                        <label for="slide-1" class="slide-circulo">•</label>
+                    </li>
+                    <li>
+                        <label for="slide-2" class="slide-circulo">•</label>
+                    </li>
+                    <li>
+                        <label for="slide-3" class="slide-circulo">•</label>
+                    </li>
+                </ol>
             </div>
         </div>
     </section>
-
-    <footer class="footer">
-        <div class="foteer__main_container">
-            <div class="container">
-                <div class="type__icon">
-                    <img class="icon" src="img/location-pin.png">
-                </div>
-                <div class="type__content">
-                    <h5>Nuestas oficinas</h5>
-                    <p>Calle 43 # 12-15 <br> Transversal 94 # 45-12</p>
-                </div>
-            </div>
-            <div class="container">
-                <div class="type__icon">
-                    <img class="icon" src="img/support.png">
-                </div>
-                <div class="type__content">
-                    <h5>Líneas de atención</h5>
-                    <p>01 8000 66 66 66 <br> Bogotá +57 654 878 2565</p>
-                </div>
-            </div>
-            <div class="container">
-                <div class="type__icon">
-                    <img class="icon" src="img/virus.png">
-                </div>
-                <div class="type__content">
-                    <h5>Línea Covid-19/ Viruela Símica</h5>
-                    <p>01 8000 11 22 33 <br> Bogotá +57 456 878 2565</p>
-                </div>
-            </div>
+<!----------BODY: SECCIÓN 2-------->
+    <section class="Auxseccion2">
+            <img class="AuxiliarBody1" src="./img/AuxiliarBody1.png">
+            <img class="AuxiliarBody2" src="./img/AuxiliarBody2.png">
+    </section>
+    <section class="BotonesConsultas">
+            <button type="submit" class= "botonConsAux1">Consultar pacientes registrados</button>
+            <button type="submit" class= "botonConsAux2">Consultar datos de paciente</button>
+        </section>
+        <section class="Auxseccion3">
+            <img class="OurAllyes" src="./img/OurAllyes.png">
+    </section>
+<!-------------------FOOTER------->
+<footer class="footer">
+    <div class="footer__main_container">
+        <div class="container">
+            <img class="icon" src="img/location-pin.png">
+            <h5>Nuestas oficinas</h5>
+            <p>Calle 43 # 12-15</p>
+            <p>Transversal 94 # 45-12</p>
         </div>
-        <div class="footer__links">
-            <p>2022 © Todos los derechos reservados ǀ Términos y condiciones ǀ Políticas de privacidad ǀ Lineamientos de
-                seguridad ǀ Sostenibilidad</p>
+        <div class="container">
+            <img class="icon" src="img/support.png">
+            <h5>Líneas de atención</h5>
+            <p>01 8000 66 66 66 </p>
+            <p> Bogotá +57 654 878 2565</p>
         </div>
-        <div class="footer__recomendations">
-            <p>Navegadores recomendados: Internet Explorer 10.0 o superior; Google Chrome, Firefox o Safari en su última
-                versión</p>
+        <div class="container">
+            <img class="icon" src="img/virus.png">
+            <h5>Línea Covid-19/ Viruela Símica</h5>
+            <p>01 8000 11 22 33 </p>
+            <p> Bogotá +57 456 878 2565</p>
         </div>
-        <div class="developers">
-            <div class="developers__icon">
-                <img class="icon" src="img/github.png">
+    </div>
+    <div class= "footer__links_recomendations"> 
+        <p>2022 © Todos los derechos reservados ǀ Términos y condiciones ǀ Políticas de privacidad ǀ Lineamientos de seguridad ǀ Sostenibilidad</p>
+        <p>Navegadores recomendados: Internet Explorer 10.0 o superior; Google Chrome, Firefox o Safari en su última versión</p>
+        <img class="icon" src="img/whatsapp.png">
+        <img class="icon" src="img/facebook.png">
+        <img class="icon" src="img/instagram.png">
+        <img class="icon" src="img/youtube.png">
+        <img class="icon" src="img/linkedin.png">
+    </div>
+    <div class="developers">
+        <p><h5>Developed by Unicorn Team</h5></p>
+        <div class="developers__members">
+            <div class="members__profile">
+                <p><h5><a href="https://github.com/Darly145">Darly Rodríguez</a></h5>Darly145</p>
             </div>
-            <div class="developers__members">
-                <p>Developed by
-                <h5><a href="https://github.com/Darly145">Darly Rodríguez</a> - <a
-                        href="https://github.com/VampDanny">Daniel Sánchez</a> - <a
-                        href="https://github.com/dgguzmangr">David Guzmán</a> - <a
-                        href="https://github.com/seiferdisast">Daniel Rodríguez</a> - <a
-                        href="https://github.com/Muchiha91">David Chávez</a></h5>
-                </p>
+            <div class="members__profile">
+                <p><h5><a href="https://github.com/VampDanny">Daniel Sánchez</a></h5>VampDanny</p>
             </div>
-        </div>
-        <div class="socialnetworks">
-            <div id="socialnetworks__icon">
-                <img class="icon" src="img/whatsapp.png">
-                <img class="icon" src="img/facebook.png">
-                <img class="icon" src="img/instagram.png">
-                <img class="icon" src="img/youtube.png">
-                <img class="icon" src="img/linkedin.png">
+            <div class="members__profile">
+                <p><h5><a href="https://github.com/seiferdisast">Daniel Rodríguez</a></h5>seiferdisast</p>
             </div>
-        </div>
-    </footer>
-</body>
+            <div class="members__profile">
+                <p><h5><a href="https://github.com/Muchiha91">David Chávez</a></h5>Muchiha91</p>
+            </div>
+            <div class="members__profile">
+                <p><h5><a href="https://github.com/dgguzmangr">David Guzmán</a></h5>dgguzmangr</p>
+            </div>
+        </div>    
+        <img class="icon" src="img/github.png">
+</footer>
+</html>
