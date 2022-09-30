@@ -1,0 +1,181 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+:root {
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    --primario: #784D3C;
+    --gris: #e1e1e1;
+    --blanco: #ffffff;
+    --negro: #000000;
+} 
+.Encabezado{
+    background-color:darkslategrey;
+    width: 100%;
+    height: 95px;
+    display: flex;
+}
+.iconHome{
+    width: 115px;
+    height: 90px;
+    margin-left: 10px;
+}
+.userIcon{
+    width: 43px;
+    height: 43px;
+    margin-left: 1670px;
+}
+.homeIcon{
+    width: 50px;
+    height: 50px;
+}
+.buttonHome{
+    background-color:darkslategrey;
+    border: none;
+}
+.registros{
+    width: 100%;
+    height: 100px;
+    background-color:lightcyan;
+    display: flex;
+    justify-content: space-between;
+}
+.botonReg{
+    background-color: cadetblue;
+    border-color:darkolivegreen;
+	color:white;
+	font-size:1.50em;
+	margin:25px;
+	padding:5px;
+	text-align:center;
+	width:300px;
+	text-decoration:none;
+	box-shadow:0px 3px 0px #373c3c;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.botonReg:hover{
+    box-shadow:0px 0px 0px;
+    padding-top:7px;
+}
+.fondo{
+    background-color: bisque;
+    width: 100%;
+    height: 1100px;
+}
+.fondoimg{
+    width: 100%;
+    height: 1100px;
+}
+/** footer **/
+h1, h2, h3, h4, h5 {
+    font-family: var(--fuenteHeading);
+    line-height: 3.2;
+}
+
+p {
+    font-family: var(--fuenteParrafos);
+    line-height: 2.8;
+}
+.footer {
+    padding-bottom: 1rem;
+    margin-top: 4rem;
+    width: min(100%, 120rem);
+    margin: 0 auto;
+    background-color: gray
+}
+.footer__main_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    background-color: #ffffff;
+}
+.container {
+    font-size: 1rem;
+    line-height: 0;
+}
+.footer__links_recomendations {
+    font-family: var(--fuenteParrafos);
+    font-size: 0.8rem;
+    line-height: 2;
+    text-align: center;
+}
+.icon {
+    height: 2rem;
+    width: auto; 
+    max-height: 100%; 
+}
+.developers {
+    font-family: var(--fuenteParrafos);
+    font-size: 0.8rem;
+    line-height: 0;
+    text-align: center;
+}
+.developers__members {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+/*REGISTRAR1*/
+.signupFrm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form {
+    background-color: beige;
+    width: 900px;
+    border-radius: 8px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+  }
+  .title {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+  .inputContainer {
+    position: relative;
+    height: 45px;
+    width: 90%;
+    margin-bottom: 17px;
+  }
+  .input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 0 20px;
+    outline: none;
+    background: none;
+    z-index: 1;
+  }
+  
+  ::placeholder {
+    color: transparent;
+  }
+  .label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 0 4px;
+    color:black;
+    background-color: beige;
+    font-size: 16px;
+    transition: 0.5s;
+    z-index: 0;
+  }
+
+  .input:focus + .label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+    color: purple;
+  }
