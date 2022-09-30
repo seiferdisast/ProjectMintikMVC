@@ -2,6 +2,13 @@
   <div id="app" class="app">
     <div class="header">
       <h1>Hospitalization At Home</h1>
+      <nav>
+        <button v-on:click="verDatosPaciente">Consultar Datos Paciente</button>
+      </nav>
+    </div>
+    <div>
+      <router-view>
+      </router-view>
     </div>
   </div>
 </template>
@@ -12,7 +19,11 @@ export default {
 
   data: function () {},
 
-  methods: {},
+  methods: {
+    verDatosPaciente:function(){
+      this.$router.push({name: "consultardatosPaciente"})
+    }
+  },
 
   created: function () {},
 };
