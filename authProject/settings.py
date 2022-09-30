@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework',
     'authApp',
+    'corsheaders',
 ]
 
 SIMPLE_JWT = {
@@ -60,6 +61,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
 ]
 
 REST_FRAMEWORK = {
@@ -152,8 +154,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 import django_heroku
 django_heroku.settings(locals())
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DEBUG = False # in settings.py
 
 ALLOWED_HOSTS = ['https://hah-bank-be.herokuapp.com/', 'localhost', '127.0.0.1'] # in settings.py
+
+#Security Warning: don´t run with debug turned on in production!
+
+DEBUG = True
+
+ALLOWED_HOSTS = []
+
+CORS_ALLOW_ALL_ORIGINS = True

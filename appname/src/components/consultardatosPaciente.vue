@@ -52,10 +52,42 @@
           </div>
       </template>
     
-      <script>
-     
+    <script>
+      import axios from "axios";
+      export default {
+        name: "consultardatosPaciente",
+        data: function () {
+          return {
+            lista: [
+              {
+              documentId: "",
+              name: "",
+              lastname: "",
+              cellullarPhone: "",
+              address: "",
+              email: "",
+              role: "",
+              assignDoctor: "",
+              assignNurse: "",
+              assignRelative: ""
+              },
+            ],
+          };
+        },
+      methods: {
+          agregarlista: function () {
+            url = "http://127.0.0.1:8000/users/";
+            axios.get(url).then((result) => {
+              this.lista = result.data;
+            });
+          },
+          Link_Consultar_Dato_Paciente: function () {
+            this.$router.push("/users/consultardatosPaciente");
+          },
+        },
+      };
       </script>
-      
+            
       <style>
     .signupFrm {
         display: flex;
