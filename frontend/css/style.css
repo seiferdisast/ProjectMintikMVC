@@ -1,7 +1,8 @@
-*{
+* {
     padding: 0%;
     margin: 0%;
 }
+
 :root {
     --fuenteHeading: 'PT Sans', sans-serif;
     --fuenteParrafos: 'Open Sans', sans-serif;
@@ -10,138 +11,109 @@
     --gris: #e1e1e1;
     --blanco: #ffffff;
     --negro: #000000;
-} 
-.Encabezado{
-    background-color:darkslategrey;
+}
+
+/*ENCABEZADO*/
+.Encabezado {
+    background-color: darkslategrey;
     width: 100%;
     height: 95px;
     display: flex;
 }
-.iconHome{
+
+.iconHome {
     width: 115px;
     height: 90px;
     margin-left: 10px;
 }
-.userIcon{
+
+.userIcon {
     width: 43px;
     height: 43px;
     margin-left: 1670px;
 }
-.homeIcon{
+
+.homeIcon {
     width: 50px;
     height: 50px;
 }
-.buttonHome{
-    background-color:darkslategrey;
+
+.buttonHome {
+    background-color: darkslategrey;
     border: none;
 }
-.registros{
-    width: 100%;
-    height: 100px;
-    background-color:lightcyan;
+
+/*FORMULARIOS*/
+.registros {
+    width: 100%px;
+    height: 90px;
+    background-color: lightgrey;
     display: flex;
-    justify-content: space-between;
-}
-.botonReg{
-    background-color: cadetblue;
-    border-color:darkolivegreen;
-	color:white;
-	font-size:1.50em;
-	margin:25px;
-	padding:5px;
-	text-align:center;
-	width:300px;
-	text-decoration:none;
-	box-shadow:0px 3px 0px #373c3c;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-}
-.botonReg:hover{
-    box-shadow:0px 0px 0px;
-    padding-top:7px;
-}
-.fondo{
-    background-color: bisque;
-    width: 100%;
-    height: 1100px;
-}
-.fondoimg{
-    width: 100%;
-    height: 1100px;
-}
-/** footer **/
-h1, h2, h3, h4, h5 {
-    font-family: var(--fuenteHeading);
-    line-height: 3.2;
+    justify-content: space-evenly;
 }
 
-p {
-    font-family: var(--fuenteParrafos);
-    line-height: 2.8;
-}
-.footer {
-    padding-bottom: 1rem;
-    margin-top: 4rem;
-    width: min(100%, 120rem);
-    margin: 0 auto;
-    background-color: gray
-}
-.footer__main_container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.botonReg {
+    background-color: cadetblue;
+    border: none;
+    color: black;
+    font-size: 1.50em;
+    margin: 20px;
+    padding: 10px;
     text-align: center;
-    background-color: #ffffff;
+    width: 300px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
-.container {
-    font-size: 1rem;
-    line-height: 0;
+
+.botonReg:hover {
+    background-color: red;
+    opacity: 0.8;
+    text-decoration: none;
+    padding-top: 7px;
+    left: calc(100% - 50px);
 }
-.footer__links_recomendations {
-    font-family: var(--fuenteParrafos);
-    font-size: 0.8rem;
-    line-height: 2;
-    text-align: center;
+
+.fondo {
+    width: 100%;
+    height: 1100px;
 }
-.icon {
-    height: 2rem;
-    width: auto; 
-    max-height: 100%; 
+
+.fondoimg {
+    width: 100%;
+    height: 850px;
 }
-.developers {
-    font-family: var(--fuenteParrafos);
-    font-size: 0.8rem;
-    line-height: 0;
-    text-align: center;
-}
-.developers__members {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-}
-/*REGISTRAR1*/
+/*REGISTRAR*/
 .signupFrm {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 1100px;
+    margin-left: 40%;
 }
+
 .form {
     background-color: beige;
-    width: 900px;
+    width: 700px;
     border-radius: 8px;
     padding: 20px 40px;
     box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
-  }
-  .title {
-    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 50px;
     margin-bottom: 50px;
-  }
-  .inputContainer {
+}
+
+.inputContainer {
     position: relative;
     height: 45px;
     width: 90%;
     margin-bottom: 17px;
-  }
-  .input {
+}
+
+.input {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -154,28 +126,157 @@ p {
     outline: none;
     background: none;
     z-index: 1;
-  }
-  
-  ::placeholder {
+}
+
+::placeholder {
     color: transparent;
-  }
-  .label {
+}
+
+.label {
     position: absolute;
     top: 15px;
     left: 15px;
     padding: 0 4px;
-    color:black;
+    color: black;
     background-color: beige;
     font-size: 16px;
     transition: 0.5s;
     z-index: 0;
-  }
+}
 
-  .input:focus + .label {
+.input:focus+.label {
     top: -7px;
     left: 3px;
     z-index: 10;
     font-size: 14px;
     font-weight: 600;
-    color: purple;
-  }
+    color: brown;
+}
+
+.submitBtn {
+    display: block;
+    margin-left: auto;
+    padding: 15px 30px;
+    border: none;
+    background-color: brown;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.submitBtn:hover {
+    background-color: cadetblue;
+    transform: translateY(-2px);
+}
+/*CONSULTAS*/
+.signupConsultas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+    width: 2000px;
+}
+
+.tableConsultas {
+    background-color: beige;
+    width: 2000px;
+    border-radius: 8px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+}
+
+.title2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.consultasPacientes{
+    position: relative;
+    height: 45px;
+    width: 90%;
+    margin-bottom: 17px;
+}
+table {
+    width: 100%;
+    border: 1px solid #000;
+ }
+ th, td {
+    width: 25%;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 0.3em;
+    caption-side: bottom;
+ }
+ caption {
+    padding: 0.3em;
+    color: #fff;
+     background: #000;
+ }
+ th {
+    background: #eee;
+ }
+/*FOOTER*/
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--fuenteHeading);
+    line-height: 3.2;
+}
+
+p {
+    font-family: var(--fuenteParrafos);
+    line-height: 2.8;
+}
+
+.footer {
+    padding-bottom: 1rem;
+    margin-top: 4rem;
+    width: min(100%, 120rem);
+    margin: 0 auto;
+    background-color: gray
+}
+
+.footer__main_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.container {
+    font-size: 1rem;
+    line-height: 0;
+}
+
+.footer__links_recomendations {
+    font-family: var(--fuenteParrafos);
+    font-size: 0.8rem;
+    line-height: 2;
+    text-align: center;
+}
+
+.icon {
+    height: 2rem;
+    width: auto;
+    max-height: 100%;
+}
+
+.developers {
+    font-family: var(--fuenteParrafos);
+    font-size: 0.8rem;
+    line-height: 0;
+    text-align: center;
+}
+
+.developers__members {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
