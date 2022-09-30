@@ -63,7 +63,8 @@ MIDDLEWARE = [
 ]
 
 REST_FRAMEWORK = {
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    'DEFAULT_FILTER_BACKENDS':
+    ['django_filters.rest_framework.DjangoFilterBackend'],
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.AllowAny', ),
     'DEFAULT_AUTHENTICATION_CLASSES':
     ('rest_framework_simplejwt.authentication.JWTAuthentication', )
@@ -99,10 +100,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'd7b7vecg0ihtub',
         'USER': 'nlcwvzhjdohhlu',
-        'PASSWORD': '609a4062464b2ed642144a8a1e1008a63c523e86a45e09d827521678dbb597ba',
+        'PASSWORD':
+        '609a4062464b2ed642144a8a1e1008a63c523e86a45e09d827521678dbb597ba',
         'HOST': 'ec2-54-163-34-107.compute-1.amazonaws.com',
         'PORT': '5432',
-        
     }
 }
 
@@ -150,10 +151,32 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import django_heroku
+
 django_heroku.settings(locals())
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-DEBUG = False # in settings.py
+DEBUG = False  # in settings.py
 
-ALLOWED_HOSTS = ['https://hah-bank-be.herokuapp.com/', 'localhost', '127.0.0.1'] # in settings.py
+ALLOWED_HOSTS = [
+    'https://hah-bank-be.herokuapp.com/', 'localhost', '127.0.0.1'
+]  # in settings.py
+
+# Update database configuration with $DATABASE_URL.
+import dj_database_url
+
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
+
+
+
+
+
+
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
