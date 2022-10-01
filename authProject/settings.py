@@ -157,9 +157,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #import django_heroku
 #django_heroku.settings(locals())
 
-import os
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-DEBUG = False # in settings.py
-
-ALLOWED_HOSTS = ['https://hah-bank-be.herokuapp.com/', 'localhost', '127.0.0.1'] # in settings.py
+#import os
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#
+#DEBUG = False # in settings.py
+#
+#ALLOWED_HOSTS = ['https://hah-bank-be.herokuapp.com/', 'localhost', '127.0.0.1'] # in settings.py
