@@ -55,7 +55,7 @@
     <script>
       import axios from "axios";
       export default {
-        name: "consultardatosPaciente",
+        name: "consultarDatosPaciente",
         data: function () {
           return {
             lista: [
@@ -76,13 +76,13 @@
         },
       methods: {
           agregarlista: function () {
-            url = "http://127.0.0.1:8000/users/";
+            url = "http://127.0.0.1:8000/users/?role=paciente" //falta definir la url de origen 
             axios.get(url).then((result) => {
               this.lista = result.data;
             });
           },
           Link_Consultar_Dato_Paciente: function () {
-            this.$router.push("/users/consultardatosPaciente");
+            this.$router.push("/read/readpatientdata");
           },
         },
       };

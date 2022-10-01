@@ -73,7 +73,7 @@ export default {
       });
     },
     Link_Consultar_Paciente: function () {
-      this.$router.push("/users/");
+      this.$router.push("/read/readpatients");
     },
   },
 };

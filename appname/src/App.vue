@@ -3,15 +3,22 @@
     <div class="header">
       <h1>Hospitalization At Home</h1>
       <nav>
-        <button class="boton-nav-funciones" click="consultarPacientes">
-          Consultar Pacientes
+        <button class="boton-nav-funciones" click="actualizar">
+          <router-view v-on:click="actualizar"> Actualizar </router-view>
+        </button>
+      </nav>
+      <nav>
+        <button class="boton-nav-funciones" click="consultar">
+          <router-view v-on:click="consultar"> Consultar </router-view>
+        </button>
+      </nav>
+      <nav>
+        <button class="boton-nav-funciones" click="registrar">
+          <router-view v-on:click="registrar"> Registrar </router-view>
         </button>
       </nav>
     </div>
-    <div class="main-component">
-      <router-view v-on:click="consultarPacientes"> </router-view>
-    </div>
-
+    
     <div class="footer">
       <h2>MisiónTIC 2022 - Equipo 1 Ciclo 3</h2>
     </div>
@@ -19,6 +26,17 @@
 </template>
 
 <script>
+import actualizarDatosPersonalesFamiliar from './components/actualizarDatosPersonalesFamiliar.vue'
+import actualizarDatosPersonalesPaciente from './components/actualizarDatosPersonalesPaciente.vue'
+import actualizarEnfermeroAsignado from './components/actualizarEnfermeroAsignado.vue'
+import actualizarMedicoAsignado from './components/actualizarMedicoAsignado.vue'
+import consultarPacientes from './components/consultarPacientes.vue';
+import consultarDatosPaciente from './components/consultarDatosPaciente.vue'
+import registrarEnfermero from './components/registrarEnfermero.vue'
+import registrarFamiliar from './components/registrarFamiliar.vue'
+import registrarMedico from './components/registrarMedico.vue'
+import registrarPaciente from './components/registrarPaciente.vue'
+
 export default {
   name: "App",
   data: function () {
@@ -27,11 +45,22 @@ export default {
   components: {},
 
   methods: {
-    consultarPacientes: function () {
-      $router.push({ name: "consultarpacientes" });
+    actualizar: function () {
+      $router.push({ name: "actualizar" });
     },
-    created: function () {},
+    created: function () { },
+
+    consultar: function () {
+      $router.push({ name: "consultar" });
+    },
+    created: function () { },
+
+    registrar: function () {
+      $router.push({ name: "registrar" });
+    },
+    created: function () { },
   },
+
 };
 </script>
 
@@ -47,7 +76,7 @@ body {
   height: 10vh;
   min-height: 100px;
 
-  background-color: #283747;
+  background-color: #1673b1;
   color: #e5e7e9;
   display: flex;
   justify-content: space-between;
@@ -57,5 +86,18 @@ body {
 .header h1 {
   width: 20%;
   text-align: center;
+}
+.boton-nav-funciones {
+    background-color: cadetblue;
+    border: none;
+    color: black;
+    font-size: 1.50em;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    width: 300px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 </style>
