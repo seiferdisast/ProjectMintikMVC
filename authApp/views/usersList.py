@@ -8,7 +8,7 @@ class UsersList(generics.ListAPIView):
     serializer_class = UserSerializer
     queryset = User.objects.all()
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['role','documentId','email','name','lastName']
+    filterset_fields = ['role','documentId','assignDoctor']
 
 
 

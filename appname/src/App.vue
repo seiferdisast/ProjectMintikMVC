@@ -3,12 +3,17 @@
     <div class="header">
       <h1>Hospitalization At Home</h1>
       <nav>
-        <button v-on:click="verDatosPaciente">Consultar Datos Paciente</button>
+        <button class="boton-nav-funciones" click="consultarPacientes">
+          Consultar Pacientes
+        </button>
       </nav>
     </div>
-    <div>
-      <router-view>
-      </router-view>
+    <div class="main-component">
+      <router-view v-on:click="consultarPacientes"> </router-view>
+    </div>
+
+    <div class="footer">
+      <h2>MisiónTIC 2022 - Equipo 1 Ciclo 3</h2>
     </div>
   </div>
 </template>
@@ -16,16 +21,17 @@
 <script>
 export default {
   name: "App",
-
-  data: function () {},
+  data: function () {
+    return {};
+  },
+  components: {},
 
   methods: {
-    verDatosPaciente:function(){
-      this.$router.push({name: "consultardatosPaciente"})
-    }
+    consultarPacientes: function () {
+      $router.push({ name: "consultarpacientes" });
+    },
+    created: function () {},
   },
-
-  created: function () {},
 };
 </script>
 

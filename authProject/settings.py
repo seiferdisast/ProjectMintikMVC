@@ -10,8 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+import importlib
 from pathlib import Path
 from datetime import timedelta
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,6 +28,7 @@ SECRET_KEY = 'django-insecure-f9gpbxp)+6-s3+k6swa@$=uirgfp&cahk^c8_sds6oj^bsr5+4
 DEBUG = True
 
 ALLOWED_HOSTS = []
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
@@ -61,12 +64,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "corsheaders.middleware.CorsMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 REST_FRAMEWORK = {
-    'DEFAULT_FILTER_BACKENDS':
-    ['django_filters.rest_framework.DjangoFilterBackend'],
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.AllowAny', ),
     'DEFAULT_AUTHENTICATION_CLASSES':
     ('rest_framework_simplejwt.authentication.JWTAuthentication', )
@@ -102,10 +104,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'd7b7vecg0ihtub',
         'USER': 'nlcwvzhjdohhlu',
-        'PASSWORD':
-        '609a4062464b2ed642144a8a1e1008a63c523e86a45e09d827521678dbb597ba',
+        'PASSWORD': '609a4062464b2ed642144a8a1e1008a63c523e86a45e09d827521678dbb597ba',
         'HOST': 'ec2-54-163-34-107.compute-1.amazonaws.com',
         'PORT': '5432',
+        
     }
 }
 
@@ -152,10 +154,10 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-import django_heroku
+#import django_heroku
+#django_heroku.settings(locals())
 
-django_heroku.settings(locals())
-
+import os
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DEBUG = False # in settings.py
