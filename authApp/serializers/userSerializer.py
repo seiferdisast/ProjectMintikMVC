@@ -18,6 +18,11 @@ class UserSerializer(serializers.ModelSerializer):
         userInstance = User.objects.create(**validated_data)
         return userInstance
 
+    def update(self, instance, validated_data):
+        instance.documentId = validated_data.get('documentId', instance.documentId)
+        instance.save()
+        return instance
+
     def to_representation(self, obj):
         if(obj is None):
             return None
@@ -40,3 +45,8 @@ class UserLiteSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['documentId']
+
+class UserWriteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = "__all__"

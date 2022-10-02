@@ -19,6 +19,8 @@ from authApp import views
 from authApp.views.patientsView import PatientsView
 from authApp.views.usersList import UsersList
 
+from authApp.views.actualyzationView import UpdateUserView
+from authApp.views.userDeleteView import UserDeleteView
 
 urlpatterns = [
     path('login/', TokenObtainPairView.as_view()),
@@ -27,4 +29,6 @@ urlpatterns = [
     path('user/<int:pk>/', views.UserDetailView.as_view()), #deprecated
     path('patients/', PatientsView.as_view()), #deprecated
     path('users/', UsersList.as_view()),
+    path('user/<int:pk>/update/', UpdateUserView.as_view()),
+    path('user/<int:pk>/delete/', UserDeleteView.as_view()),
 ]
