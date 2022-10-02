@@ -18,6 +18,11 @@
         </button>
       </nav>
     </div>
+
+    <div class="main-component">
+      <router-view v-on:registrar="registrar">
+      </router-view>
+    </div>
     
     <div class="footer">
       <h2>MisiónTIC 2022 - Equipo 1 Ciclo 3</h2>
@@ -47,17 +52,34 @@ export default {
   methods: {
     actualizar: function () {
       $router.push({ name: "actualizar" });
-    },
-    created: function () { },
-
+    }, 
+    
     consultar: function () {
       $router.push({ name: "consultar" });
     },
-    created: function () { },
+    
 
     registrar: function () {
-      $router.push({ name: "registrar" });
+      this.$router.push({ name: "registrar" });
     },
+    
+
+    registrarPacientes: function () {
+      this.$router.push({ name: "registrarPacientes" });
+    },
+
+    registrardoctor: function () {
+      this.$router.push({ name: "registrardoctor" });
+    },
+
+    registrarpariente: function () {
+      this.$router.push({ name: "registrarpariente" });
+    },
+
+    registrarenfermero: function () {
+      this.$router.push({ name: "registrarenfermero" });
+    },
+
     created: function () { },
   },
 
