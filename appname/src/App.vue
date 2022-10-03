@@ -149,6 +149,26 @@ export default {
       this.$router.push({ name: "registrarenfermero" });
     },
 
+    consultarunpaciente: function () {
+      this.$router.push({ name: "consultarunpaciente" });
+    },
+
+    actualizarpaciente: function () {
+      this.$router.push({ name: "actualizarpaciente" });
+    },
+
+    actualizarfamiliar: function () {
+      this.$router.push({ name: "actualizarfamiliar" });
+    },
+
+    actualizarEnfermeroasignado: function () {
+      this.$router.push({ name: "actualizarEnfermeroasignado" });
+    },
+
+    actualizarDoctorasignado: function () {
+      this.$router.push({ name: "actualizarDoctorasignado" });
+    },
+
     created: function () { },
   },
 
