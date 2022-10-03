@@ -42,7 +42,7 @@
         <input type="text" class="input" v-model="user.familiar" placeholder="a" />
         <label for="" class="label">Familiar Asignado</label>
       </div>
-      <button type="submit">Registrarse</button>
+      <button type="submit">Registrar</button>
       </form>
   </div>
 </template>
@@ -105,21 +105,24 @@ export default {
 
 <style>
 .signupFrm {
+  background-image: url("http://drive.google.com/uc?export=view&id=1V_cUsoLVoT0iRiJY0zr0E65Fck888wM3");
   display: flex;
-  justify-content: center;
+  justify-content:right;
   align-items: center;
   height: 100vh;
 }
 .form {
-  background-color: beige;
-  width: 900px;
+  opacity: 0.8;
+  background-color:white;
+  width: 500px;
   border-radius: 8px;
   padding: 20px 40px;
   box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
+  margin-right: 15%;
 }
 .title {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 50px;
+  font-family: Georgia;
+  font-size: 40px;
   margin-bottom: 50px;
 }
 .inputContainer {
@@ -133,14 +136,14 @@ export default {
   top: 0px;
   left: 0px;
   height: 100%;
-  width: 100%;
-  border: 1px solid gray;
+  width: 400px;
+  border: 0.5px solid cadetblue;
   border-radius: 7px;
   font-size: 16px;
   padding: 0 20px;
   outline: none;
-  background: none;
   z-index: 1;
+  color:brown;
 }
 
 ::placeholder {
@@ -151,22 +154,35 @@ export default {
   top: 15px;
   left: 15px;
   padding: 0 4px;
-  color: black;
-  background-color: beige;
   font-size: 16px;
   transition: 0.5s;
   z-index: 0;
 }
-
 .input+label {
+  background-color:white;
   top: -7px;
   left: 3px;
   z-index: 10;
   font-size: 14px;
   font-weight: 600;
-  color: purple;
+  color:black;
 }
 .forma input{
-    width: 100%;
+  width: 100%;
+}
+.input:focus + .label {
+  color:darkcyan;
+}
+button {
+  display: block;
+  margin-left: auto;
+  padding: 15px 30px;
+  border: none;
+  background-color:darkcyan;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 30px;
 }
 </style>
