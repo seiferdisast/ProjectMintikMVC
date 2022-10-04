@@ -67,7 +67,7 @@ export default {
 
   methods: {
     agregarlista: function () {
-      const url ="http://127.0.0.1:8000/users/?role=paciente";
+      const url ="http://127.0.0.1:8000/users/?role=Paciente";
       axios.get(url).then((result) => {
         this.lista = result.data;
       });
@@ -117,7 +117,7 @@ body {
   background: #2b63a0;
 }
 .consulta_registro {
-  height: 70px;
+  height: 600px;
   width: 810px;
   margin: 5px 5px;
 }
